@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee+Outline&family=Montserrat:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #A03333;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+body{
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+
+
+.btn {
+    --border-color: #222222;
+    --border-width: .125em;
+    --curve-size: .5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #f8f8f8;
+    color: var(--color);
+      /* use position: relative; so that BG is only for .btn */
+    position: relative;
+    isolation: isolate;
+    place-content: center;
+    padding: .1em 1.0em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+    clip-path: polygon(
+              /* Top-left */
+              0% var(--curve-size),
+  
+              var(--curve-size) 0,
+              /* top-right */
+              100% 0,
+              100% calc(100% - var(--curve-size)),
+  
+              /* bottom-right 1 */
+              calc(100% - var(--curve-size)) 100%,
+              /* bottom-right 2 */
+              0 100%);
+    transition: color 250ms;
+    width: 152px;
+    height: 44px;
+  }
+  
+  .btn::after,
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  .btn::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+  }
+  
+  @keyframes move-bg7234 {
+    0% {
+      background-position: 31% 0%
+    }
+  
+    50% {
+      background-position: 70% 100%
+    }
+  
+    100% {
+      background-position: 31% 0%
+    }
+  }
+  
+  .btn::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+              /* Top-left */
+              var(--border-width) 
+              calc(var(--curve-size) + var(--border-width) * .5),
+  
+              calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+  
+              /* top-right */
+              calc(100% - var(--border-width)) 
+              var(--border-width),
+  
+              calc(100% - var(--border-width)) 
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+  
+              /* bottom-right 1 */
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+              /* bottom-right 2 */
+              var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+  }
+  
+  .btn:where(:hover, :focus)::after {
+    clip-path: polygon(
+                  /* Top-left */
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      
+                  calc(100% - var(--border-width))
+  
+                  var(--border-width),
+      
+                  /* top-right */
+                  calc(100% - var(--border-width))
+  
+                   var(--border-width),
+      
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+      
+                  /* bottom-right 1 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                  calc(100% - var(--border-width)),
+  
+                  /* bottom-right 2 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                  calc(100% - var(--border-width)));
+    transition: 200ms;
+  }
+  
+  .btn:where(:hover, :focus) {
+    color: #fff;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 21px;
+
+}
+
+.navbar ul li a{
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 28px;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    justify-content: flex-end;
+    margin: 15px;
+}
+.navbar ul li {
+margin-top: 12px;
+}
+
+
+.navbar button {
+    justify-content: flex-end;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-right: 40px;
+}
+
+.navbar img {
+    margin-right: 630px;
+    width: 101.61px;
+    height: 60px;
+}
+
+.botao button {
+    font-family: 'Bebas Neue', sans-serif;
+
+}
+
+button i {
+    background-color: transparent;
+}
+
+
+.texto {
+    float: left;
+    margin-top: 80px;
+    color: #FFFFFF;
+    width: 689px;
+    padding-left: 50px;
+}
+
+.transparent h1 {
+    font-family: 'Bungee Outline', cursive;
+    font-size: 60px;
+    height: 98px;
+    width: 558px;
+}
+
+.normal h1{
+    font-family: 'Bebas Neue', sans-serif;
+    height: 98px;
+    font-size: 75px;
+    width: 430px;
+    line-height: 122.4px;
+    padding-bottom: 15px;
+}
+
+.paragrafo {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 25px;
+}
+
+.bombado {
+    float: right;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+.linha {
+    background-color: #222222;
+    font-family: 'Bebas Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    clear: both;
+}
+
+.linha p {
+    color: #fff;
+    background-color: #222222;
+    font-size: 33px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+.linha i {
+    color: #fff;
+    background-color: #222222;
+    margin-top: 7px;
+    font-size: 25px;
+    padding-right: 7px;
+    padding-left: 7px;
+}
+
+.parte2{
+    height: 500px;
+}
+
+
+.texto1 {
+    font-family: 'Bungee Outline', cursive;
+    font-size: 55px;
+    float: left;
+    margin-right: 15px;
+
+}
+
+.texto2{
+    margin-top: 50px;
+    font-size: 75px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.titulo {
+    margin-top: 130px;
+    margin-left: 400px;
+    color: #fff;
+}
+
+.cards {
+    margin-left: 60px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card {
+    width: 300px;
+    height: 346px;
+    color: #FFFFFF;
+  }
+  
+  .title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+  }
+  
+  .paragraf {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  
+  .card button {
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 20px;
+  }
+  
+  .card img {
+    width: 77px;
+    height: 77px;
+    margin-left: 20px;
+    padding: 10px;
+    padding-top: 30px;
+  }
+
+  #red {
+    --border-color: #222222;
+    --border-width: .125em;
+    --curve-size: .5em;
+    --blur: 30px;
+    --bg: #FF0202;
+    --color: #f8f8f8;
+    color: var(--color);
+      /* use position: relative; so that BG is only for .btn */
+    position: relative;
+    isolation: isolate;
+    place-content: center;
+    padding: .1em 1.0em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgb(245, 0, 0);
+    clip-path: polygon(
+              /* Top-left */
+              0% var(--curve-size),
+  
+              var(--curve-size) 0,
+              /* top-right */
+              100% 0,
+              100% calc(100% - var(--curve-size)),
+  
+              /* bottom-right 1 */
+              calc(100% - var(--curve-size)) 100%,
+              /* bottom-right 2 */
+              0 100%);
+    transition: color 250ms;
+    width: 152px;
+    height: 44px;
+  }
+  
+  .btn::after,
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  .btn::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+  }
+  
+  @keyframes move-bg7234 {
+    0% {
+      background-position: 31% 0%
+    }
+  
+    50% {
+      background-position: 70% 100%
+    }
+  
+    100% {
+      background-position: 31% 0%
+    }
+  }
+  
+  .btn::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+              /* Top-left */
+              var(--border-width) 
+              calc(var(--curve-size) + var(--border-width) * .5),
+  
+              calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+  
+              /* top-right */
+              calc(100% - var(--border-width)) 
+              var(--border-width),
+  
+              calc(100% - var(--border-width)) 
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+  
+              /* bottom-right 1 */
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+              /* bottom-right 2 */
+              var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+  }
+  
+  .btn:where(:hover, :focus)::after {
+    clip-path: polygon(
+                  /* Top-left */
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      
+                  calc(100% - var(--border-width))
+  
+                  var(--border-width),
+      
+                  /* top-right */
+                  calc(100% - var(--border-width))
+  
+                   var(--border-width),
+      
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+      
+                  /* bottom-right 1 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                  calc(100% - var(--border-width)),
+  
+                  /* bottom-right 2 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                  calc(100% - var(--border-width)));
+    transition: 200ms;
+  }
+  
+  .btn:where(:hover, :focus) {
+    color: #fff;
+  }
+  
+
+  .card2 {
+    width: 400px;
+    height: 346px;
+    color: #FFFFFF;
+    background-color: #222222;
+    margin-left: 30px;
+    margin-top: 25px;
+    
+  }
+  
+  .title2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    padding-bottom: 10px;
+    width: 400px;
+    background-color: #000000;
+    color: #FFFFFF;
+    
+  }
+  
+  .paragraf2 {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+    font-size: 20px;
+    width: 400px;
+    background-color: #B4B4B4;
+    color: #787878;
+    
+  }
+
+  .parte3{
+    background-color: #222222;
+  
+  }
+
+  .nossos {
+    padding: 50px;
+    margin-top:100px;
+    background-color: #222222;
+    color: #FFFFFF;
+    font-size: 62px;
+    text-align: center;
+  }
+
+
+  .card3 {
+    width: 400px;
+    height: 346px;
+    color: #FFFFFF;
+    background-color: #222222;
+    margin-left: 30px;
+  }
+  
+  .title3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    padding-bottom: 10px;
+    width: 400px;
+    background-color: #FF0202;
+    color: #FFFFFF;
+    
+  }
+  
+  .paragraf3 {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+    font-size: 20px;
+    width: 400px;
+    background-color: #B4B4B4;
+    color: #787878;
+    
+  }
+
+
+  
+  
+  .card-container {
+    background-color: #222222;
+    display: flex;
+    justify-content: flex-start; /* Centraliza os cards horizontalmente */
+    gap: 15px; /* Espaçamento entre os cards */
+  }
+
+  strong{
+    background-color: transparent;
+    color: #FFFFFF;
+  }
+  
+  .card4 {
+    width: 400px;
+    height: 346px;
+    color: #FFFFFF;
+    background-color: #222222;
+    margin-left: 30px;
+    margin-top: 25px;
+    
+  }
+  
+  .title4 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    padding-bottom: 10px;
+    width: 400px;
+    background-color: #000000;
+    color: #FFFFFF;
+    
+  }
+  
+  .paragraf4 {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+    font-size: 20px;
+    width: 400px;
+    background-color: #B4B4B4;
+    color: #787878;
+    
+  }
+  
+
+  .imagem {
+    float: left;
+  }
+
+
+
+  #parte  {
+    font-family: 'Bungee Outline', cursive;
+    color: #fff;
+    font-size: 52px;
+  }
+
+  .para{
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+  }
+
+  .one {
+    float: left;
+    padding: 10px;
+    color: #fff;
+  }
+
+  .one p {
+    font-family: 'Montserrat', sans-serif;
+
+    color: #fff;
+  }
+
+  .two {
+    float: left;
+    padding: 10px;
+    color: #fff;
+  }
+
+  .two p {
+    font-family: 'Montserrat', sans-serif;
+
+    color: #fff;
+  }
+  
+
+  .three {
+    float: left;
+    padding: 10px;
+    color: #fff;
+  }
+
+  .three p {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+  }
+
+  .convite {
+
+  }
+
+  .number {
+    margin-top: 20px;
+  }
+
+  .contato {
+    clear: both;
+  }
+
+  input {
+    background-color: #222222;
+  }
+
+  
+
+
+
+
+
